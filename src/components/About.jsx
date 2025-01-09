@@ -34,20 +34,22 @@ const About = () => {
     <>
     
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText }>Introduction</p>
+        <p className={styles.sectionSubText }>Web Developer - Youssef Elaamrani</p>
         <h2 className={styles.heroHeadText}>Overview.</h2>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-white  text-[17px] max-w-3xl leading-[30px]"
       >
-        Hautement motivé et apprenant rapide, capable d'acquérir rapidement de
-        nouvelles compétences tant dans des environnements académiques que
-        freelances. Capacité prouvée à saisir rapidement des concepts complexes,
-        démontrant une approche proactive envers l'apprentissage continu.
-        S'épanouit dans des environnements collaboratifs, habile à favoriser le
-        travail d'équipe et la communication efficace, perfectionnée à travers
-        des projets scolaires et des travaux en freelance.
+       Web Developer - Youssef Elaamrani
+
+As a dedicated web developer, I specialize in building dynamic and responsive websites.
+ With a strong foundation in front-end and back-end technologies, I am passionate
+  about creating seamless user experiences and optimizing web performance. 
+  My expertise spans across HTML, CSS, JavaScript, and frameworks like React and Node.js.
+   I am committed to continuous learning and always stay up to date with the latest industry trends 
+   and technologies to ensure I deliver high-quality and scalable solutions.
+    I thrive in collaborative environments and aim to bring creative solutions to any challenge.
       </motion.p>
       <div className="mt-20 flex flex-wrap justify-center gap-6">
         {services.map((service, index) => (

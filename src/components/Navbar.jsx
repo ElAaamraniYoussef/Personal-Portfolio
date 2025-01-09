@@ -29,48 +29,48 @@ const Navbar = () => {
     <nav
      className={`${
       styles.paddingX } w-full flex items-center py-5 fixed top-0 z-20  ${
-        scrolled ? "bg-black" : "bg-transparent"
+        scrolled ? "bg-[#150830] " : "bg-transparent"
       }`}>
       <div className="w-full flex justify-between  items-center max-w-7xl mx-auto">
         <Link
           to='/'
           className="flex items-center gap-2"
           onClick={() => {
-            setActive("");
+            setActive(" ");
             window.scrollTo(0, 0);
           }}
         >
           {/* Logo image with inline styles */}
-          <div className=" flex items-center   m-0 "> <img 
-  src={logo} 
-  alt="logo" 
-  className="object-contain " 
-  style={{ width: "300px", height: "60px" }} 
+           <img 
+                  src={logo} 
+                  alt="logo" 
+                  className="object-contain w-22 h-12" 
 />
  {/* Text next to the logo */}
           <p className="text-white text-[18px] font-bold cursor-pointer m-0 flex hover:text-[#3f0aafee]">Youssef  &nbsp;
           </p> <span className="font-bold sm:block hidden hover:text-[#ff4309] text-[18px] cursor-pointer">
           | El Aamrani</span>
-          </div>
+         
          
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
               {
-                navLinks.map((link) =>(
+                navLinks.map((nav) =>(
                         <li 
-                              key={link.id}
+                              key={nav.id}
                                   className={`${ 
-                                    active === link.title 
+                                    active === nav.title 
                                     ? "text-[#ff4309] "
                                     :"text-secondary"
                                               }
                                                 hover:text-[#ff4309] text-[18px] font-medium cursor-pointer
                                               `}
-                                                          onClick={()=>setActive(link.title)} 
+                                                          onClick={()=>setActive(nav.title)} 
                                             >
-                                    <a href={`#${link.id}`}>
-                                              {link.title}
+                                    <a href={`#${nav.id}`}>
+                                              {nav.title}
                                     </a>
+                                  
                         </li>
                         
                       ))
@@ -88,12 +88,12 @@ const Navbar = () => {
               <div className={`${!toggle ?'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl `}>
               <ul className="list-none flex  justify-end items-start flex-col gap-4 ">
               {
-                navLinks.map((link) =>(
+                navLinks.map((nav) =>(
                         <li
-                         key={link.id}
+                         key={nav.id}
                          
                             className={`${
-                            active === link.title 
+                            active === nav.title 
                                         ? 'text-while' 
                                         :  'text-secondary'
                                         } font-poppins font-bold  
@@ -102,11 +102,11 @@ const Navbar = () => {
                                           `}
                             onClick={()=>{
                               setToggle(!toggle) ;
-                              setActive(link.title);
+                              setActive(nav.title);
                             }} 
                                       >
-                              <a href={`#${link.id}`}>
-                                         {link.title}
+                              <a href={`#${nav.id}`}>
+                                         {nav.title}
                               </a>
                         </li>
                       ))
